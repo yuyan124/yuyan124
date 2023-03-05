@@ -13,6 +13,9 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -29,5 +32,6 @@ jobs:
       - name: Push to GitHub
         uses: EndBug/add-and-commit@v7.2.1
         with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
           message: 'Generate Contribution Snake'
