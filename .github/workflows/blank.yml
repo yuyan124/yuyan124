@@ -31,3 +31,6 @@ jobs:
         with:
           branch: main
           message: 'Generate Contribution Snake'
+    permissions:
+      contents: write  # To push a branch 
+      pull-requests: write  # To create a PR from that branch
